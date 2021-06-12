@@ -53,6 +53,13 @@ set ::env(EXTRA_GDS_FILES) "\
 
 set ::env(GLB_RT_MAXLAYER) 5
 
+set ::env(GLB_RT_ADJUSTMENT) 0.70
+# 0 -> 1: 1 means don't use the layer
+# l2 is met1
+set ::env(GLB_RT_L2_ADJUSTMENT) 0.9
+set ::env(GLB_RT_L3_ADJUSTMENT) 0.7
+
+set ::env(ROUTING_OPT_ITERS) 100
 set ::env(FP_PDN_CHECK_NODES) 0
 
 # The following is because there are no std cells in the example wrapper project.
