@@ -5,7 +5,7 @@
 
 # SHA-1 engine
 
-See a [https://github.com/konradwilk/sha1](https://github.com/konradwilk/sha1) for the full git history of this code. Branch name is submission-mpw-two-c.
+See a [https://github.com/konradwilk/sha1](https://github.com/konradwilk/sha1) for the full git history of this code. Branch name is submission-mpw-two.
 
 This is an implementation of [https://www.rfc-editor.org/rfc/inline-errata/rfc3174.html](RFC 3174) of SHA-1 engine.
 
