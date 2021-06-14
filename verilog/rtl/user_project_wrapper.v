@@ -117,7 +117,7 @@ module user_project_wrapper #(
         .irq        (user_irq),
 
         // active input, only connect tristated outputs if this is high
-        .active     (la_data_in[32+3])
+        .active     (la_data_in[32+4])
         );
 
 
