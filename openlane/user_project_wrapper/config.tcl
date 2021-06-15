@@ -43,13 +43,19 @@ set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$script_dir/../../caravel/verilog/rtl/defines.v \
 	$script_dir/../../verilog/rtl/sha1/src/sha1_wb.v \
-	$script_dir/../../verilog/rtl/sha1/src/wrapper_sha1.v"
+	$script_dir/../../verilog/rtl/sha1/src/wrapper_sha1.v
+	$script_dir/../../verilog/rtl/fibonacci/src/wrapper.v \
+	$script_dir/../../verilog/rtl/fibonacci/src/clkdiv.v \
+	$script_dir/../../verilog/rtl/fibonacci/src/wb_logic.v \
+	$script_dir/../../verilog/rtl/fibonacci/src/fibonacci.v"
 
 set ::env(EXTRA_LEFS) "\
-	$script_dir/../../lef/wrapper_sha1.lef"
+	$script_dir/../../lef/wrapper_sha1.lef \
+	$script_dir/../../lef/wrapper_fibonacci.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-	$script_dir/../../gds/wrapper_sha1.gds"
+	$script_dir/../../gds/wrapper_sha1.gds \
+	$script_dir/../../gds/wrapper_fibonacci.gds"
 
 set ::env(GLB_RT_MAXLAYER) 5
 

@@ -28,5 +28,10 @@
     //  4 ('SHA1',)                      : /home/konrad/sha1
 	`include "sha1/src/wrapper_sha1.v"
 	`include "sha1/src/sha1_wb.v"
+   //  3
+	`include "fibonacci/src/clkdiv.v"
+	`include "fibonacci/src/fibonacci.v"
+	`include "fibonacci/src/wb_logic.v"
+	`include "fibonacci/src/wrapper.v"
 
 `endif
