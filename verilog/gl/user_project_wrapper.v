@@ -53,7 +53,7 @@ module user_project_wrapper (user_clock2,
  output [31:0] wbs_dat_o;
  input [3:0] wbs_sel_i;
 
- wrapper_sha1 wrapper_sha1 (.active(la_data_in[36]),
+ wrapper_fibonacci wrapper_fibonacci (.active(la_data_in[35]),
     .wb_clk_i(wb_clk_i),
     .wb_rst_i(wb_rst_i),
     .wbs_ack_o(wbs_ack_o),
@@ -381,8 +381,7 @@ module user_project_wrapper (user_clock2,
     wbs_sel_i[2],
     wbs_sel_i[1],
     wbs_sel_i[0]}));
-
- wrapper_fibonacci wrapper_fibonacci (.active(la_data_in[35]),
+ wrapper_sha1 wrapper_sha1 (.active(la_data_in[36]),
     .wb_clk_i(wb_clk_i),
     .wb_rst_i(wb_rst_i),
     .wbs_ack_o(wbs_ack_o),
