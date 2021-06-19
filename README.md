@@ -26,3 +26,34 @@ make test_wb_logic
 
 which will use the various WishBone commands to program it.
 
+### Documentation
+
+To create the GDS files, there are macros that are being ingested. The best way to do is by
+checking out the SHA-1 engine:
+
+```
+git clone https://github.com/konradwilk/sha1
+```
+
+And then there are some pre-requisities:
+
+ - You need to have OpenLANE installed. The Makefile assumes that is all setup.
+   Specifically that the docker container is installed.
+ - And make sure to have TARGET_PATH set to this directory (caravel_user_project).
+ - You have the `open_mpw_checker` installed as well (and the docker container).
+
+From within the `sha1` directory execute:
+
+```
+make gds
+```
+
+which will generate the GDS, LEF, etc files. Copy them in the `gds` sub-directory.
+After that, you need to copy them to `caravel_user_project`. To do that:
+
+```
+make caravel
+```
+
+which will copy the appropiate files, run the OpenLANE to jam the macros together, and
+run the checkers.
