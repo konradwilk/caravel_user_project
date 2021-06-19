@@ -17,19 +17,13 @@ it has completed it will bring it high if that is enabled.
 
 ![SHA1](pics/sha1.png)
 
-If you want to see this more interactively, I would recommend you clone
-[https://github.com/konradwilk/sha1](https://github.com/konradwilk/sha1) and run
 
-```
-make test_wb_logic
-```
+# Documentation for building
 
-which will use the various WishBone commands to program it.
-
-### Documentation
+## Setup
 
 To create the GDS files, there are macros that are being ingested. The best way to do is by
-checking out the SHA-1 engine:
+checking out the SHA-1 engine [https://github.com/konradwilk/sha1](https://github.com/konradwilk/sha1):
 
 ```
 git clone https://github.com/konradwilk/sha1
@@ -44,16 +38,31 @@ And then there are some pre-requisities:
 
 From within the `sha1` directory execute:
 
+# Creating of GDS
+
 ```
 make gds
 ```
 
-which will generate the GDS, LEF, etc files. Copy them in the `gds` sub-directory.
-After that, you need to copy them to `caravel_user_project`. To do that:
+which after running tests will generate the GDS, LEF, etc files. It will also copy
+them in the `gds` sub-directory.  Those files should then be in caravel_user_project, which
+can either be done manually, or with automatic way. To do that:
 
 ```
 make caravel
 ```
 
-which will copy the appropiate files, run the OpenLANE to jam the macros together, and
-run the checkers.
+which will copy the appropiate files, run the OpenLANE to create the user_project_wrapper macro
+together, and run the checkers.
+
+
+# To understand the code
+
+The best way is to look at the test-cases and run them:
+
+```
+make test_wb_logic
+```
+
+which will use the various WishBone commands to program it.
+
