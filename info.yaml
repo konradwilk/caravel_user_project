@@ -7,8 +7,8 @@ project:
   organization_url: "http://darnok.org"
   owner: "Konrad Rzeszutek Wilk"
   process: "SKY130"
-  project_name: "Caravel"
-  project_id: "00000000"
+  project_name: "SHA-1"
+  project_id: "53484131"
   tags:
     - "Open MPW"
     - "Test Harness"
