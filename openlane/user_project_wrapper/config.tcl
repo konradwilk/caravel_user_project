@@ -59,6 +59,9 @@ set ::env(EXTRA_GDS_FILES) "\
 
 set ::env(GLB_RT_MAXLAYER) 5
 
+set ::env(RUN_KLAYOUT_XOR) 0
+set ::env(RUN_KLAYOUT_DRC) 0
+
 set ::env(GLB_RT_ADJUSTMENT) 0.70
 # 0 -> 1: 1 means don't use the layer
 # l2 is met1
